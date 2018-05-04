@@ -8,7 +8,7 @@ using Task3.Solution.Models;
 
 namespace Task3.Solution.Observables
 {
-    public class Stock : IObservable
+    public class Stock : IStock
     {
         public event Action<object> ObservableEvent = delegate { };
 

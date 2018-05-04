@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Api\IObservable.cs" />
     <Compile Include="Api\IObserver.cs" />
+    <Compile Include="Api\IStock.cs" />
     <Compile Include="Observables\Stock.cs" />
     <Compile Include="Observers\Broker.cs" />
     <Compile Include="Observers\Bank.cs" />
