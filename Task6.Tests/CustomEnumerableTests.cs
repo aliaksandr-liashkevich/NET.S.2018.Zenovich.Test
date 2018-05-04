@@ -17,7 +17,7 @@ namespace Task6.Tests
         [Test]
         public void Generator_ForSequence1()
         {
-            IFunctor<int> generator = new InfinityCollection<int>(1, 1, (x, y) => x+y);
+            IFunctor<int> generator = new InfinityCollection<int>(1, 1, (nminus1, n) => n + nminus1);
             int[] expected = {1, 1, 2, 3, 5, 8, 13, 21, 34, 55};
 
             int[] actual = generator.Take(expected.Length).ToArray();
@@ -28,7 +28,7 @@ namespace Task6.Tests
         [Test]
         public void Generator_ForSequence2()
         {
-            IFunctor<int> generator = new InfinityCollection<int>(1, 2, (x, y) => 6*y - 8*x);
+            IFunctor<int> generator = new InfinityCollection<int>(1, 2, (nminus1, n) => 6 * n - 8 * nminus1);
             int[] expected = { 1, 2, 4, 8, 16, 32, 64, 128, 256, 512 };
 
             int[] actual = generator.Take(expected.Length).ToArray();
@@ -39,7 +39,7 @@ namespace Task6.Tests
         [Test]
         public void Generator_ForSequence3()
         {
-            IFunctor<double> generator = new InfinityCollection<double>(1, 2, (x, y) => y + x / y);
+            IFunctor<double> generator = new InfinityCollection<double>(1, 2, (nminus1, n) => n + nminus1 / n);
             double[] expected = { 1, 2, 2.5, 3.3, 4.05757575757576, 4.87086926018965, 5.70389834408211, 6.55785277425587, 7.42763417076325, 8.31053343902137 };
 
             double[] actual = generator.Take(expected.Length).ToArray();

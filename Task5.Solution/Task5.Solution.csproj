@@ -50,6 +50,7 @@
     <Compile Include="Api\IFactory.cs" />
     <Compile Include="Client.cs" />
     <Compile Include="Document.cs" />
+    <Compile Include="Factories\GeneralFactory.cs" />
     <Compile Include="Factories\HtmlFactory.cs" />
     <Compile Include="Factories\LaTeXFactory.cs" />
     <Compile Include="Factories\PlainTextFactory.cs" />

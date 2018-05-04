@@ -10,10 +10,12 @@ using Task5.Solution.LaTeX;
 
 namespace Task5.Solution
 {
+    // TODO: must fixed
     public class Client
     {
         private Dictionary<Type, IFactory<IConverter>> factories;
 
+        // use this ctor only for test
         public Client(string text, string url)
         {
             factories = new Dictionary<Type, IFactory<IConverter>>();

@@ -45,6 +45,7 @@
     <Compile Include="Services\Client.cs" />
     <Compile Include="Services\MeanCalculator.cs" />
     <Compile Include="Services\MedianCalculator.cs" />
+    <Compile Include="Services\UserCalculator.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
