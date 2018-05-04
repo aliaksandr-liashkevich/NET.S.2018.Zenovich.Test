@@ -49,6 +49,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Task5.Solution\Task5.Solution.csproj">
+      <Project>{7B085EBA-A095-4948-A2F7-5D62ED5335E6}</Project>
+      <Name>Task5.Solution</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Task5\Task5.csproj">
       <Project>{b477d425-3efb-4fbd-a310-7578c6cb42f3}</Project>
       <Name>Task5</Name>

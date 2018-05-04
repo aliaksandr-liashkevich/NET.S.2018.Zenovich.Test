@@ -8,9 +8,9 @@ using Task5.Solution.Api.Converters;
 
 namespace Task5.Solution.Factories
 {
-    class PlainTextFactory : IFactory<IPlainTextConverter>
+    public class PlainTextFactory : IFactory<IPlainTextConverter>
     {
-        private List<IPlainTextConverter> converters;
+        private List<IPlainTextConverter> converters = new List<IPlainTextConverter>();
 
         public void Add(IPlainTextConverter converter)
         {

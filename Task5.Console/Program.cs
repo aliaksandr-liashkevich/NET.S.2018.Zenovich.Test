@@ -1,4 +1,7 @@
-﻿namespace Task5.Console
+﻿using Task5.Solution;
+using Task5.Solution.Factories;
+
+namespace Task5.Console
 {
     using System.Collections.Generic;
     using System;
@@ -8,20 +11,21 @@
     {
         static void Main(string[] args)
         {
-            List<DocumentPart> parts = new List<DocumentPart>
-                {
-                    new PlainText {Text = "Some plain text"},
-                    new Hyperlink {Text = "google.com", Url = "https://www.google.by/"},
-                    new BoldText {Text = "Some bold text"}
-                };
+            string text = "google.com", url = "https://www.google.by/";
 
-            Document document = new Document(parts);
+            Client client = new Client(text, url);
 
-            Console.WriteLine(document.ToHtml());
+            var html = client.GetDocument(typeof(HtmlFactory));
+            var plaint = client.GetDocument(typeof(PlainTextFactory));
+            var latex = client.GetDocument(typeof(LaTeXFactory));
 
-            Console.WriteLine(document.ToPlainText());
+            Console.WriteLine(html);
 
-            Console.WriteLine(document.ToLaTeX());
+            Console.WriteLine(plaint);
+
+            Console.WriteLine(latex);
+
+            Console.ReadKey();
         }
     }
 }

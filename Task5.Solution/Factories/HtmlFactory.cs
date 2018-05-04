@@ -10,7 +10,7 @@ namespace Task5.Solution.Factories
 {
     public class HtmlFactory : IFactory<IHtmlConverter>
     {
-        private List<IHtmlConverter> converters;
+        private List<IHtmlConverter> converters = new List<IHtmlConverter>();
 
         public void Add(IHtmlConverter converter)
         {

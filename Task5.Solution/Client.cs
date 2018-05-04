@@ -64,6 +64,8 @@ namespace Task5.Solution
             });
 
             factories.Add(htmlFactory.GetType(), htmlFactory);
+            factories.Add(laTeXFactory.GetType(), laTeXFactory);
+            factories.Add(plainTextFactory.GetType(), plainTextFactory);
         }
 
         public string GetDocument(Type type)

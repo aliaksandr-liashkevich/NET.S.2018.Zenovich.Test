@@ -10,7 +10,7 @@ namespace Task5.Solution.Factories
 {
     public class LaTeXFactory : IFactory<ILaTeXConverter>
     {
-        private List<ILaTeXConverter> converters;
+        private List<ILaTeXConverter> converters = new List<ILaTeXConverter>();
 
         public void Add(ILaTeXConverter converter)
         {
