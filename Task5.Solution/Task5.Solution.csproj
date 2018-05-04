@@ -40,7 +40,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Api\Converters\IHtmlConverter.cs" />
+    <Compile Include="Api\Converters\ILaTeXConverter.cs" />
+    <Compile Include="Api\Converters\IPlainTextConverter.cs" />
+    <Compile Include="Api\DocumentPart.cs" />
+    <Compile Include="Api\HyperDocumentPart.cs" />
+    <Compile Include="Api\IConverter.cs" />
+    <Compile Include="Api\IDocument.cs" />
+    <Compile Include="Api\IFactory.cs" />
+    <Compile Include="Client.cs" />
+    <Compile Include="Document.cs" />
+    <Compile Include="Factories\HtmlFactory.cs" />
+    <Compile Include="Factories\LaTeXFactory.cs" />
+    <Compile Include="Factories\PlainTextFactory.cs" />
+    <Compile Include="Html\HtmlBoldText.cs" />
+    <Compile Include="Html\HtmlHyperlink.cs" />
+    <Compile Include="Html\HtmlPlainText.cs" />
+    <Compile Include="LaTeX\LaTeXBoldText.cs" />
+    <Compile Include="LaTeX\LaTeXHyperlink.cs" />
+    <Compile Include="LaTeX\LaTeXPlainText.cs" />
+    <Compile Include="PlainText\PlainBoldText.cs" />
+    <Compile Include="PlainText\PlainHyperlink.cs" />
+    <Compile Include="PlainText\PlainText.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
