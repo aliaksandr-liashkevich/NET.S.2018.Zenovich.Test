@@ -7,7 +7,7 @@ using Task1.Solution.ViewModels;
 
 namespace Task1.Solution.Api
 {
-    interface IPasswordCheckerService
+    public interface IPasswordCheckerService
     {
         Tuple<bool, string> VerifyPassword(User vm);
     }

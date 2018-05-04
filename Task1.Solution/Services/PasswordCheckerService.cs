@@ -8,7 +8,7 @@ using Task1.Solution.ViewModels;
 
 namespace Task1.Solution.Services
 {
-    class PasswordCheckerService : IPasswordCheckerService
+    public class PasswordCheckerService : IPasswordCheckerService
     {
         private ISqlRepository _sqlRepository;
 
