@@ -12,9 +12,8 @@ namespace Task2.Solution.RandomFileGenerators
     {
         private string _workingDirectory;
 
-        public RandomCharsFileGenerator(string workingDirectory)
+        public RandomCharsFileGenerator()
         {
-            WorkingDirectory = workingDirectory;
             FileExtension = ".txt";
         }
 

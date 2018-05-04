@@ -8,7 +8,7 @@ using Task2.Solution.Api;
 
 namespace Task2.Solution.RandomFileGenerators
 {
-    class RandomBytesFileGenerator : IRandomFileGenerator
+    public class RandomBytesFileGenerator : IRandomFileGenerator
     {
         private string _workingDirectory;
 

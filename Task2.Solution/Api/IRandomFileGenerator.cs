@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Task2.Solution.Api
 {
-    interface IRandomFileGenerator
+    public interface IRandomFileGenerator
     {
         string WorkingDirectory { get; set; }
 
