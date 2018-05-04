@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Task1.Solution.ViewModels;
 
 namespace Task1.Solution.Api
 {
     interface IPasswordCheckerService
     {
-        Tuple<bool, string> VerifyPassword(string password);
+        Tuple<bool, string> VerifyPassword(User vm);
     }
 }
