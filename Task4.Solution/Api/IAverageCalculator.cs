@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Task4.Solution.Api
 {
-    public interface ICalculateAverage
+    public interface IAverageCalculator
     {
         double Calculate(List<double> values);
     }

@@ -7,7 +7,7 @@ using Task4.Solution.Api;
 
 namespace Task4.Solution.Services
 {
-    public class MeanCalculator : ICalculateAverage
+    public class MeanCalculator : IAverageCalculator
     {
         public double Calculate(List<double> values)
         {

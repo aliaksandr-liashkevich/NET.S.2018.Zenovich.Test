@@ -11,15 +11,20 @@ namespace Task4.Solution.Services
     {
         public static double NotFound = default(double);
 
-        private Dictionary<Type, ICalculateAverage> _calculators;
+        private Dictionary<Type, IAverageCalculator> _calculators;
 
         public Client()
         {
-            _calculators = new Dictionary<Type, ICalculateAverage>();
+            _calculators = new Dictionary<Type, IAverageCalculator>();
         }
 
-        public void Add(ICalculateAverage calculator)
+        public void Add(IAverageCalculator calculator)
         {
+            if (calculator == null)
+            {
+                throw new ArgumentNullException(nameof(calculator));
+            }
+
             _calculators.Add(calculator.GetType(), calculator);
         }
 
@@ -31,7 +36,7 @@ namespace Task4.Solution.Services
             }
 
             var calculator = _calculators
-               .FirstOrDefault((c) => c.GetType() == type).Value;
+               .FirstOrDefault((c) => c.Key == type).Value;
 
             if (calculator == null)
             {
